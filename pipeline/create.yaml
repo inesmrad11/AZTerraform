@@ -60,6 +60,7 @@ stages:
               command: 'apply'
               workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/dev'
               environmentServiceNameAzureRM: 'Azure-Service-Connection'
+              commandOptions: '-auto-approve'
 
 - stage: Test_Deploy
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
@@ -82,3 +83,4 @@ stages:
               command: 'apply'
               workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/test'
               environmentServiceNameAzureRM: 'Azure-Service-Connection'
+              commandOptions: '-auto-approve'
