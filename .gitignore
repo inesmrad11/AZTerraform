@@ -1,0 +1,13 @@
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tfvars
+*.tfplan
+
+# Local configuration
+.terraform.lock.hcl
+
+# Sensitive data
+terraform.tfvars
+*.auto.tfvars
